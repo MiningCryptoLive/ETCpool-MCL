@@ -11,6 +11,8 @@
 			    <th>ID</th>
 			    <th>Hashrate <small class="text-green">(rough, short average)</small></th>
 			    <th>Hashrate <small class="text-green">(accurate, long average)</small></th>
+          <th>Hostname</th>
+          <th>Port Difficulty</th>
 			    <th>Blocks</th>
 			    <th><small class="text-green">Valid</small>  /  <small class="text-orange">Stale</small>  /  <small class="text-red">Invalid 24h</small></th>
 			    <th>Last <small class="text-green">Share</small></th>
@@ -22,6 +24,8 @@
 				  <td>{{k}}</td>
 				  <td>{{format-hashrate v.hr}}  {{#if v.w_stat_s}}<i class="fa fa-arrow-up" style="color:rgb(0, 9, 128)" aria-hidden="true"></i>{{else}}<i class="fa fa-arrow-down" style="color:red" aria-hidden="true"></i>{{/if}}</td>
 				  <td>{{format-hashrate v.hr2}}  {{#if v.w_stat}}<i class="fa fa-arrow-up" style="color:rgb(0, 9, 128)" aria-hidden="true"></i>{{else}}<i class="fa fa-arrow-down" style="color:red" aria-hidden="true"></i>{{/if}}</td>
+            <td>{{v.hostname}}</td>
+            <td><span class="label label-success">{{format-hashrate v.portDiff}}</span></td>
 				  <td>{{v.blocks}}</td>
 				  <td><span class="text-green">{{v.valid}}</span> ({{v.v_per}}%) / <span class="text-yellow">{{v.stale}}</span> ({{v.s_per}}%) / <span class="text-red">{{v.invalid}}</span> ({{v.i_per}}%)</td>
 				  <td>{{format-relative (seconds-to-ms v.lastBeat)}}</td>
