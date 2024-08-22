@@ -51,8 +51,10 @@
 	   <center>
        {{#if model.stats.lastShare}}
 		<div class="text-black"><h2>{{t "account.last_share_submitted}}</h2></div><span>{{format-relative (seconds-to-ms (string-to-int model.stats.lastShare))}}</span><small class="text-black"><b>LAST</b></small> <small class="text-green"><u>SHARE</u></small>
-	   </center>
+	   
+     </center>
 	  </div>
+      {{/if}}
 	</div>
     <div class="col-xs-12 col-md-4">
 	  <div class="note note-success">
